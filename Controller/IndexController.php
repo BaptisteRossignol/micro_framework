@@ -15,6 +15,16 @@ class IndexController extends ControllerAbstract
         $this->render('index.php');
     }
 
+    public function accesdb()
+    {
+        $stmt = $this->db->pdo->prepare('SELECT prenom FROM contact');
+        $stmt->execute();
+        $message = $stmt->fetch();
+        $message = $message['prenom'];
+        $this->vars = ['prenom' => $message];
+        $this->render('accesdb.php');
+    }
+
     /**
      * Display the template page.
      */
@@ -39,4 +49,5 @@ class IndexController extends ControllerAbstract
     {
         $this->render('404.php');
     }
+
 }

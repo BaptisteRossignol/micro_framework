@@ -18,7 +18,8 @@
                     <li><a href="?controller=index&action=index">Index</a></li>
                     <li><a href="?controller=index&action=page">Page</a></li>
                     <li><a href="?controller=index&action=list">Liste</a></li>
-                    <li><a href="?controller=index&action=your_choice">NotFound</a></li>
+                    <li><a href="?controller=index&action=notfound">NotFound</a></li>
+                    <li><a href="?controller=index&action=accesdb">Accès DB</a></li>
                     <li><a href="?controller=perso&action=page">Page perso</a></li>
                 </ul>
                 <a href="?"></a>

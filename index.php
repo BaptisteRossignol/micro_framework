@@ -1,19 +1,19 @@
 <?php
 
-use Classes as classes; 
-require 'classes/Autoloader.php';
-classes\Autoloader::Register();
+use Classe as classe; 
+
+require 'classe/Autoloader.php';
+classe\Autoloader::Register();
+
 include 'Request.php';
 include 'Controller/ControllerAbstract.php';
 include 'Controller/IndexController.php';
-
-// Nouveau Controller
 include 'Controller/PersoController.php';
-
 include 'ContainerInterface.php';
 include 'Container.php';
+
 $container = new Container();
-$db = new classes\Database();
+$db = new classe\Database();
 $container->add('database', $db);
 
 $request = Request::getInstance();
@@ -25,7 +25,7 @@ $rendered = false;
 
 if (file_exists(sprintf('Controller/%s.php', $className))) {
     if (class_exists($className)) {
-        $controller = new $className();
+        $controller = new $className(null, $container->get('database'));
         $action = $request->get('action', 'index');
         if ($action && method_exists($controller, $action)) {
             $controller->$action();

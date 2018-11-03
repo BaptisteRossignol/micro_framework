@@ -1,10 +1,9 @@
 <?php
-
-namespace Classes;
+namespace Classe;
 
 class Database 
 {
-    private $pdo;
+    public $pdo;
 
     private static $_instance = null;
 

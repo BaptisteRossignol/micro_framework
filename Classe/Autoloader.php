@@ -1,6 +1,5 @@
 <?php
-
-namespace Classes;
+namespace Classe;
 
 class Autoloader
 {

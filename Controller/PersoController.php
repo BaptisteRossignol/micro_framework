@@ -2,7 +2,7 @@
 
 
 /**
- * Classe IndexController.
+ * Classe PersoController.
  */
 class PersoController extends ControllerAbstract
 {
